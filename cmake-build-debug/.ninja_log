@@ -1,0 +1,4 @@
+# ninja log v6
+7	426	7427137921970602	CMakeFiles/test01.dir/chapter01/test01.cpp.obj	3efa46e5b74e5676
+1	447	7427137921909412	CMakeFiles/test01.dir/chapter01/symmetric_matrix.cpp.obj	eaa327ab1e4a024c
+447	552	7427137926360438	test01.exe	3056bb9fac44c2dd

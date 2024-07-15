@@ -1,7 +1,3 @@
-//
-// Created by mynam on 2024/7/15.
-//
-
 #ifndef ARRAY_SYMMETRIC_MATRIX_H
 #define ARRAY_SYMMETRIC_MATRIX_H
 

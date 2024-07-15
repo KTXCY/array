@@ -1,6 +1,3 @@
-//
-// Created by mynam on 2024/7/15.
-//
 
 #include "symmetric_matrix.h"
 

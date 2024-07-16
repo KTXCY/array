@@ -5,39 +5,28 @@
 #include <random>
 #include <iostream>
 
-using std::cin;
-using std::cout;
-using std::endl;
 using namespace std;
 
-constexpr int MAX_NUM = 5;
+constexpr int MAXSIZE = 10;
 
-typedef int array1[MAX_NUM];
-typedef array1 array2[MAX_NUM];
+typedef int array1[MAXSIZE];
+typedef array1 array2[MAXSIZE];
 
-//生成随机数
+/* 初始化随机数生成器 */
+static random_device rd;
+/* 使用Mersenne Twister算法初始化随机数引擎 */
+static mt19937 gen(rd());
+
 int get_random_num(int min, int max);
 
-//生成一个随机下三角对称矩阵
-bool AssignArray_low(int array[][MAX_NUM], int row);
+bool AssignArray(int array[][MAXSIZE], int size);
 
-//打印随机对称矩阵
-void PrintArray(int array[][MAX_NUM], int row);
+void PrintArray(int array[][MAXSIZE], int size);
 
-//生成一个随机上三角对称矩阵
-bool AssignArray_up(int array[][MAX_NUM], int row);
+bool PackArray(int array[][MAXSIZE], int *arr, int size);
 
-//对下三角矩阵进行压缩
-bool PackArray_low(int array[][MAX_NUM], int *arr, int row);
+void Print_PackArray(int *arr, int size);
 
-//打印压缩后的矩阵
-void Print_PackArray(int *arr, int row);
-
-//对上三角矩阵进行压缩
-bool PackArray_up(int array[][MAX_NUM], int *arr, int row);
-
-int Find_low(int i, int j, int row);
-
-int Find_up(int i, int j, int row);
+int Find_index(int x, int y, int size);
 
 #endif //ARRAY_SYMMETRIC_MATRIX_H

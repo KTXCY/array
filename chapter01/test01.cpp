@@ -7,48 +7,18 @@
 #include "symmetric_matrix.h"
 
 int main() {
-    array2 arr1 = {0};
-    array2 arr2 = {0};
-
-    const int x = MAX_NUM * (MAX_NUM + 1) / 2;
-    int arr3[x];
-    int arr4[x];
-
-    cout << "+++++++压缩前的下三角对称矩阵++++++++++" << endl;
-    AssignArray_low(arr1, MAX_NUM);
-    PrintArray(arr1, MAX_NUM);
-
-    cout << "+++++++压缩后的下三角对称矩阵++++++++++" << endl;
-    PackArray_low(arr1, arr3, MAX_NUM);
-    Print_PackArray(arr3, x);
-
-    int i = 0;
-    int j = 0;
-    cin >> i;
-    cin >> j;
-    int c = Find_low(i, j, MAX_NUM);
+    array2 arr1;
+    int n = MAXSIZE * (MAXSIZE + 1) / 2;
+    int arr2[n];
+    AssignArray(arr1, MAXSIZE);
+    PrintArray(arr1, MAXSIZE);
+    PackArray(arr1, arr2, MAXSIZE);
+    Print_PackArray(arr2, n);
+    int x;
+    int y;
+    cin >> x >> y;
+    int c = Find_index(x, y, MAXSIZE);
     cout << c << endl;
-
-    int b = arr3[c];
-    cout << b << endl;
-
-
-    cout << "\n";
-    cout << "+++++++压缩前的上三角对称矩阵++++++++++" << endl;
-    AssignArray_up(arr2, MAX_NUM);
-    PrintArray(arr2, MAX_NUM);
-
-    cout << "+++++++压缩后的上三角对称矩阵++++++++++" << endl;
-    PackArray_up(arr2, arr4, MAX_NUM);
-    Print_PackArray(arr4, x);
-
-    cin >> i;
-    cin >> j;
-    c = Find_up(i, j, MAX_NUM);
-    cout << c << endl;
-
-    b = arr4[c];
-    cout << b << endl;
-
+    cout << arr2[c] << endl;
     return 0;
 }

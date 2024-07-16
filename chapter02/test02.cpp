@@ -2,6 +2,11 @@
 // Created by mynam on 2024/7/16.
 //
 
+/*
+ * 以下三角矩阵在进行压缩存储的时候
+ * 不考虑存储重复的元素
+ */
+
 #include "triangular_matrix.h"
 
 int main() {
